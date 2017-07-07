@@ -1,0 +1,39 @@
+doctype html
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel = 'stylesheet' href = '/assets/lib/semantic-ui/semantic.min.css')
+    link(rel = 'stylesheet' href = '/assets/css/stylesheet.css')
+    block page-title
+  body(class = 'base')
+    div(class = 'ui right sidebar vertical inverted menu')
+      a(class = 'item') Lorem Ipsum
+    div(class = 'ui attached menu main-menu')
+      div(class = 'right menu')
+        a(class = 'item') Home
+        div(class = 'ui dropdown item') About
+          i(class = 'dropdown icon')
+          div(class = 'menu')
+            a(class = 'item') Alari Homes
+            a(class = 'item') Our Team
+        a(class = 'item') DDA Services
+        div(class = 'ui dropdown item') Portfolio
+          i(class = 'dropdown icon')
+          div(class = 'menu')
+            a(class = 'item') Gallery
+            a(class = 'item') Plans and Permits
+        a(class = 'item') Contact
+        a(class = 'item') 4079 Kulamanu
+        a(id = 'btnMenu' class = 'item')
+          i(class = 'sidebar icon')
+    script(type = 'text/javascript' src = '/assets/lib/jquery/jquery.min.js')
+    script(type = 'text/javascript' src = '/assets/lib/semantic-ui/semantic.min.js')
+    script(type = 'text/javascript')
+      .
+        var $btnMenu = $('#btnMenu');
+        $('.ui.dropdown').dropdown();
+        
+        $btnMenu.on('click', function() {
+          $('.ui.sidebar').first().sidebar('toggle');
+        });
